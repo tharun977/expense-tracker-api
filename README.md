@@ -1,3 +1,6 @@
+Here's the entire content formatted in Markdown for your `README.md` file:
+
+```markdown
 # Expense Tracker API
 
 A RESTful API for managing expenses, built with Node.js, Express, and MongoDB. This API allows users to register, log in, and manage their expenses efficiently.
@@ -35,38 +38,49 @@ A RESTful API for managing expenses, built with Node.js, Express, and MongoDB. T
    ```bash
    git clone https://github.com/tharun977/expense-tracker-api.git
    cd expense-tracker-api
-Install the required dependencies:
+   ```
 
-bash
-Copy code
-npm install
-Create a .env file in the root directory and add the following environment variables:
+2. Install the required dependencies:
 
-env
-Copy code
-MONGODB_URI=mongodb://username:password@localhost:27017/expensesDB  # Replace with your MongoDB credentials
-PORT=5000
-JWT_SECRET=your_jwt_secret  # Replace with a strong secret key
-Start the server:
+   ```bash
+   npm install
+   ```
 
-bash
-Copy code
-npm start
-The server will run on http://localhost:5000.
+3. Create a `.env` file in the root directory and add the following environment variables:
 
-API Endpoints
-User Routes
-POST /api/users/register: Register a new user.
-POST /api/users/login: Log in an existing user.
-Expense Routes
-GET /api/expenses: Get all expenses for the logged-in user.
-POST /api/expenses: Add a new expense.
-PUT /api/expenses/:id: Update an existing expense by ID.
-DELETE /api/expenses/:id: Delete an expense by ID.
-Example Usage
-Register a User
-bash
-Copy code
+   ```env
+   MONGODB_URI=mongodb://username:password@localhost:27017/expensesDB  # Replace with your MongoDB credentials
+   PORT=5000
+   JWT_SECRET=your_jwt_secret  # Replace with a strong secret key
+   ```
+
+4. Start the server:
+
+   ```bash
+   npm start
+   ```
+
+   The server will run on `http://localhost:5000`.
+
+## API Endpoints
+
+### User Routes
+
+- **POST** `/api/users/register`: Register a new user.
+- **POST** `/api/users/login`: Log in an existing user.
+
+### Expense Routes
+
+- **GET** `/api/expenses`: Get all expenses for the logged-in user.
+- **POST** `/api/expenses`: Add a new expense.
+- **PUT** `/api/expenses/:id`: Update an existing expense by ID.
+- **DELETE** `/api/expenses/:id`: Delete an expense by ID.
+
+## Example Usage
+
+### Register a User
+
+```bash
 curl -X POST http://localhost:5000/api/users/register \
 -H "Content-Type: application/json" \
 -d '{
@@ -75,18 +89,22 @@ curl -X POST http://localhost:5000/api/users/register \
   "mobile": "0987654321",
   "password": "mypassword123"
 }'
-Login a User
-bash
-Copy code
+```
+
+### Login a User
+
+```bash
 curl -X POST http://localhost:5000/api/users/login \
 -H "Content-Type: application/json" \
 -d '{
   "email": "jane@example.com",
   "password": "mypassword123"
 }'
-Add a New Expense
-bash
-Copy code
+```
+
+### Add a New Expense
+
+```bash
 curl -X POST http://localhost:5000/api/expenses \
 -H "Authorization: Bearer <token>" \
 -H "Content-Type: application/json" \
@@ -95,15 +113,21 @@ curl -X POST http://localhost:5000/api/expenses \
   "description": "Groceries",
   "date": "2024-10-19"
 }'
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+```
 
-Contributing
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
 Contributions are welcome! Please open an issue or submit a pull request.
 
-Acknowledgements
-Express - Web framework for Node.js
-MongoDB - NoSQL database
-Mongoose - MongoDB object modeling for Node.js
-bcryptjs - Password hashing library
-jsonwebtoken - JWT implementation
+## Acknowledgements
+
+- [Express](https://expressjs.com/) - Web framework for Node.js
+- [MongoDB](https://www.mongodb.com/) - NoSQL database
+- [Mongoose](https://mongoosejs.com/) - MongoDB object modeling for Node.js
+- [bcryptjs](https://github.com/dcodeIO/bcrypt.js) - Password hashing library
+- [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) - JWT implementation
+```
