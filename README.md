@@ -1,6 +1,4 @@
-Here's the entire content formatted in Markdown for your `README.md` file:
 
-```markdown
 # Expense Tracker API
 
 A RESTful API for managing expenses, built with Node.js, Express, and MongoDB. This API allows users to register, log in, and manage their expenses efficiently.
