@@ -1,6 +1,4 @@
-Here's the entire content formatted in Markdown for your `README.md` file:
 
-```markdown
 # Expense Tracker API
 
 A RESTful API for managing expenses, built with Node.js, Express, and MongoDB. This API allows users to register, log in, and manage their expenses efficiently.
@@ -38,13 +36,11 @@ A RESTful API for managing expenses, built with Node.js, Express, and MongoDB. T
    ```bash
    git clone https://github.com/tharun977/expense-tracker-api.git
    cd expense-tracker-api
-   ```
 
 2. Install the required dependencies:
 
    ```bash
    npm install
-   ```
 
 3. Create a `.env` file in the root directory and add the following environment variables:
 
@@ -52,13 +48,11 @@ A RESTful API for managing expenses, built with Node.js, Express, and MongoDB. T
    MONGODB_URI=mongodb://username:password@localhost:27017/expensesDB  # Replace with your MongoDB credentials
    PORT=5000
    JWT_SECRET=your_jwt_secret  # Replace with a strong secret key
-   ```
 
 4. Start the server:
 
    ```bash
    npm start
-   ```
 
    The server will run on `http://localhost:5000`.
 
@@ -89,7 +83,6 @@ curl -X POST http://localhost:5000/api/users/register \
   "mobile": "0987654321",
   "password": "mypassword123"
 }'
-```
 
 ### Login a User
 
@@ -100,7 +93,6 @@ curl -X POST http://localhost:5000/api/users/login \
   "email": "jane@example.com",
   "password": "mypassword123"
 }'
-```
 
 ### Add a New Expense
 
@@ -113,7 +105,6 @@ curl -X POST http://localhost:5000/api/expenses \
   "description": "Groceries",
   "date": "2024-10-19"
 }'
-```
 
 ## License
 
@@ -130,4 +121,3 @@ Contributions are welcome! Please open an issue or submit a pull request.
 - [Mongoose](https://mongoosejs.com/) - MongoDB object modeling for Node.js
 - [bcryptjs](https://github.com/dcodeIO/bcrypt.js) - Password hashing library
 - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) - JWT implementation
-```
